@@ -1,0 +1,11 @@
+nodes:
+  - address: 172.16.133.142 
+    user: ubuntu
+    role: [controlplane,worker,etcd]
+
+
+services:
+  etcd:
+    backup_config:
+      interval_hours: 12
+      retention: 6
