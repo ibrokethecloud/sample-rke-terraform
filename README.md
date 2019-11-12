@@ -16,7 +16,7 @@ This templatefile is used to render a RKE cluster.yaml.
 
 A *null_resource* is then used to perform **rke up**.
 
-The generate kube_config and rke state file are read back my the terraform and stored in output variables.
+The generated kube_config and rke state file are read back my the terraform and stored in output variables.
 
 This allows these objects to be stored in the terraform state. Once this is done a local copy is no longer required.
 

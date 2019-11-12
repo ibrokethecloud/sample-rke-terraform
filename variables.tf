@@ -1,17 +1,48 @@
-variable "vsphere_user" {}
+variable "vsphere_user" {
+    default = null
+}
 
-variable "vsphere_password" {}
+variable "vsphere_password" {
+    default = null
+}
 
-variable "vsphere_url" {}
+variable "vsphere_url" {
+    default = null
+}
 
-variable "vsphere_datacenter" {}
+variable "vsphere_datacenter" {
+    default = null
+}
 
-variable "vsphere_datastore" {}
+variable "vsphere_datastore" {
+    default = null
+}
 
-variable "local_pub_key" {}
+variable "local_pub_key" {
+    default = null
+}
 
-variable "vsphere_resource_pool" {}
+variable "vsphere_resource_pool" {
+    default = null
+}
 
-variable "vsphere_network" {}
+variable "vsphere_network" {
+    default = null
+}
 
-variable "vm_image" {}
+variable "vm_image" {
+    default = null
+}
+
+variable "cpu_count" {
+    default = null
+}
+
+variable "memory" {
+    default = null
+}
+
+variable "enabled" {
+    type = bool
+    default  = false
+}
