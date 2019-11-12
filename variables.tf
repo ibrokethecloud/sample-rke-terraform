@@ -46,3 +46,8 @@ variable "enabled" {
     type = bool
     default  = false
 }
+
+variable "node_count" {
+    default = 3
+}
+

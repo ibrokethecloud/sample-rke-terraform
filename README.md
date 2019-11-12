@@ -22,6 +22,6 @@ This allows these objects to be stored in the terraform state. Once this is done
 
 A user wishing to adminster the cluster or perform rke management operations needs to run `terraform output` to extract the config files.
 
+
 ### To Do:
-* Modularise the code
 * Provisioners for AWS, Azure and GCP.

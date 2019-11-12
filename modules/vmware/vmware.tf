@@ -12,7 +12,7 @@ resource "vsphere_virtual_machine" "rke-node" {
   name             = "rke-tf-demo-${count.index+1}"
   resource_pool_id = data.vsphere_resource_pool.pool.id
   datastore_id     = data.vsphere_datastore.datastore.id
-  count            = (var.enabled == true ? var.count : 0 )
+  count            = (var.enabled == true ? var.node_count : 0 )
   num_cpus         = var.cpu_count
   memory           = var.memory
   guest_id         = data.vsphere_virtual_machine.template.guest_id
@@ -44,6 +44,6 @@ resource "vsphere_virtual_machine" "rke-node" {
 
 
 module "rke-template" {
-  source = "${path.module}/../rke"
+  source = "./../rke"
   internal_ip_address = vsphere_virtual_machine.rke-node.*.default_ip_address
 }

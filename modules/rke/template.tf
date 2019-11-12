@@ -1,7 +1,7 @@
 ## Module to render template file ##
 resource "local_file" "rke_configuration" {
   filename = "${path.module}/rke-rendered.yml"
-  content = templatefile("${path.module}/rke-config.tmpl", { ip_addrs = internal_ip_address })
+  content = templatefile("${path.module}/rke-config.tmpl", { ip_addrs = var.internal_ip_address })
 }
 
 ## Boot up cluster ##

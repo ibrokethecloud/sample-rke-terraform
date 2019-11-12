@@ -16,7 +16,7 @@ variable "vsphere_network" {}
 
 variable "vm_image" {}
 
-variable "count" {}
+variable "node_count" {}
 
 variable "enabled" {
     default = false
