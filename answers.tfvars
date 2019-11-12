@@ -11,3 +11,10 @@ vsphere_network = ""
 vm_image = ""
 
 vsphere_url = ""
+
+cpu_count = "4"
+
+memory = "16384"
+
+node_count = 3
+ 
